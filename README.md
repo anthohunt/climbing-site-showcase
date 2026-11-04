@@ -1,6 +1,6 @@
 > Showcase repository: the code and data of this project are private; this README describes it. / Dépôt vitrine : le code et les données de ce projet sont privés ; ce README le décrit.
 
-# la structure website
+# Climbing instructors' website
 
 The public website and admin area of a climbing instructors' organisation, which the client runs on their own, without touching the code.
 
