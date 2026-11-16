@@ -1,43 +1,36 @@
 **English** · [Français](README.fr.md)
 
-**Anthony Hunt** · [Project page on ingevision.cloud](https://ingevision.cloud/?lang=en&p=collectif-vertical) · [LinkedIn](https://www.linkedin.com/in/anthony-hunt-3948a9196) · [GitHub profile](https://github.com/anthohunt)
+# Climbing instructors' site
 
-> Showcase repository: the code and data of this project are private; this README describes it.
+**The public site and admin of a climbing instructors' collective, which the manager runs alone, without touching the code.** Activities, dates, venues, every label, the page layout and the English version are edited from the admin.
 
-# Climbing instructors' website
+[![The calendar switches to a month grid, then "Book this date" opens the enquiry form with the date already selected (click for the full video)](docs/demo.gif)](https://drive.google.com/file/d/1B9oK9wRxfSd5EIXMBbhqnzkp8tGdWlr6/view)
 
-The public website and admin area of a climbing instructors' organisation, which the client runs on their own, without touching the code.
+*Calendar, then "Book this date": the form opens with the date already selected. [Full video (1:12)](https://drive.google.com/file/d/1B9oK9wRxfSd5EIXMBbhqnzkp8tGdWlr6/view)*
 
-## The problem
+## Using it
 
-A small climbing organisation sells guided outings. It needs a website that presents its activities, venues and instructors, shows upcoming dates and takes enquiries. The manager is not a developer: they must be able to change everything themselves, from prices to text, in French as well as in English.
+- **Activities and calendar.** Filter by type, region or month; "Book this date" opens the enquiry form on that date.
+- **Map.** Venues on an OpenStreetMap map; each marker lists the outings held there.
+- **Admin.** The manager edits activities (several prices each), dates, venues, every public label, page sections and menus, and previews before publishing. Each save refreshes the affected pages.
+- **Souvenir albums.** After an outing, participants get a private link to the photos and can leave a star rating, published after moderation.
+- **English version.** Under `/en`; each admin section has a FR/EN toggle, and an empty English field shows the French text.
+- **Statistics.** Visitors, pages, referrers, devices and countries, with no cookie and no stored IP address.
 
-## How it works
+## Architecture
 
-- Visitors browse activities, venues on a map, instructor profiles and the calendar, then book a date or send an enquiry.
-- The manager logs into the admin and edits the content; each save refreshes the affected pages, which are otherwise cached for 10 minutes.
-- After an outing, they send participants a private link to the photo album; participants can leave a star rating there, published after moderation.
-- The English version lives under `/en`: each admin section has an FR/EN toggle, and a field left empty in English shows the French text.
+![Architecture: visitors and the manager use the Next.js site on Vercel; public pages and the admin read and write a Supabase Postgres database with row-level access rules; each admin save refreshes the public pages; photos are in Supabase storage; maps use OpenStreetMap](docs/architecture.svg)
 
-## What is built
+*Diagram labels are in French.*
 
-In service and used by the client, who has created 11 activities (9 published) and 9 venues.
+## Deployment
 
-- **Activities**: publish on/off, featuring, several prices per activity, dates, a person in charge picked from a list.
-- **Editable content**: every public label, sections that can be hidden and reordered, 15 block types, free pages, menus, media library, text editor, preview of unpublished content.
-- **Public calendar**, by month or as a grid, with filters; "Book this date" preselects the date.
-- **Stories** (blog), **souvenir albums** shared by private link, moderated **star ratings**.
-- **Instructors**: public profiles, spoken languages (8 to choose from), password that an administrator can regenerate.
-- **Internal statistics**: visitors, pages, referrers, devices, countries, with no cookie, no third-party service and no stored IP address.
-- **English version**: 345 interface labels translated, 9 content types translatable in the admin, hreflang tags and a bilingual sitemap. The block editor does not have its English toggle yet.
+- **Hosting.** Vercel for the site, Supabase (Paris region) for the database and photos.
+- **Status.** Online since September 2026, run by the client.
+- **Stack.** Next.js 16, React 19, Tailwind CSS, Supabase, Leaflet.
 
-## What is public
+---
 
-The site is online. The code and the admin remain private.
+**Anthony Hunt** · [ingevision.cloud](https://ingevision.cloud/?lang=en&p=collectif-vertical) · [LinkedIn](https://www.linkedin.com/in/anthony-hunt-3948a9196) · [GitHub](https://github.com/anthohunt)
 
-## Tech stack
-
-- Next.js 16, React 19, Tailwind CSS
-- Supabase (Postgres, authentication, storage, row-level access rules)
-- Leaflet and OpenStreetMap for maps
-- Vercel hosting
+The code and the client's data are private.
