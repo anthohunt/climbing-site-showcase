@@ -21,7 +21,11 @@
 
 ![Architecture: visitors and the manager use the Next.js site on Vercel; public pages and the admin read and write a Supabase database; each admin save refreshes the public pages; photos are in Supabase storage; maps use OpenStreetMap](docs/architecture.svg)
 
-*Diagram labels are in French.*
+<details><summary>French version</summary>
+
+![Architecture : visiteurs et gérant passent par le site Next.js sur Vercel ; pages publiques et administration lisent et écrivent dans une base Supabase ; chaque enregistrement de l'administration rafraîchit les pages publiques ; les photos sont dans le stockage Supabase ; les cartes viennent d'OpenStreetMap](docs/architecture.fr.svg)
+
+</details>
 
 ## Deployment
 

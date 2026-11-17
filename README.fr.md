@@ -21,6 +21,12 @@
 
 ![Architecture : visiteurs et gérant passent par le site Next.js sur Vercel ; pages publiques et administration lisent et écrivent dans une base Supabase ; chaque enregistrement de l'administration rafraîchit les pages publiques ; les photos sont dans le stockage Supabase ; les cartes viennent d'OpenStreetMap](docs/architecture.svg)
 
+<details><summary>Diagramme en français</summary>
+
+![Architecture : visiteurs et gérant passent par le site Next.js sur Vercel ; pages publiques et administration lisent et écrivent dans une base Supabase ; chaque enregistrement de l'administration rafraîchit les pages publiques ; les photos sont dans le stockage Supabase ; les cartes viennent d'OpenStreetMap](docs/architecture.fr.svg)
+
+</details>
+
 ## Exploitation
 
 - **Hébergement.** Vercel pour le site, Supabase (région Paris) pour la base et les photos.
