@@ -1,43 +1,46 @@
 [English](README.md) · **Français**
 
-**Anthony Hunt** · [Fiche du projet sur ingevision.cloud](https://ingevision.cloud/?p=collectif-vertical) · [LinkedIn](https://www.linkedin.com/in/anthony-hunt-3948a9196) · [Profil GitHub](https://github.com/anthohunt)
+# Site de moniteurs d'escalade
 
-> Dépôt vitrine : le code et les données de ce projet sont privés ; ce README le décrit.
+**Le site d'un collectif de moniteurs d'escalade, que son gérant fait vivre seul, sans toucher au code.**
 
-# Site d’une structure d’escalade
+[![Sur le site en ligne, en anglais : les activités, une sortie, le calendrier, le formulaire de demande (jamais envoyé), puis la carte (version anglaise, cliquer pour la vidéo complète)](docs/demo.webp)](https://drive.google.com/file/d/1B9oK9wRxfSd5EIXMBbhqnzkp8tGdWlr6/view)
 
-Le site public et l'espace d'administration d'une structure de moniteurs d'escalade, que le client fait vivre seul, sans toucher au code.
+<details><summary>Version française</summary>
 
-## Le problème
+[![Sur le site en ligne, le calendrier en vue mois puis liste ; « Réserver cette date » ouvre le formulaire de demande sur cette date et un visiteur tape son nom (cliquer pour la vidéo complète)](docs/demo.fr.webp)](https://drive.google.com/file/d/1cBOu1wGiLLY-ZN2Zwqln4j9ehEzVc2Z8/view)
 
-Une petite structure d'escalade vend des sorties encadrées. Elle a besoin d'un site qui présente ses activités, ses lieux et ses moniteurs, affiche les prochaines dates et reçoit les demandes. Le gérant n'est pas développeur : il doit pouvoir tout modifier lui-même, des tarifs aux textes, en français comme en anglais.
+</details>
 
-## Comment ça marche
+*Calendrier, puis « Réserver cette date » : le formulaire s'ouvre avec la date déjà choisie. [Vidéo complète (1 min 12)](https://drive.google.com/file/d/1cBOu1wGiLLY-ZN2Zwqln4j9ehEzVc2Z8/view)*
 
-- Le visiteur parcourt les activités, les lieux sur carte, les fiches des moniteurs et le calendrier, puis réserve une date ou envoie une demande.
-- Le gérant se connecte à l'admin et modifie le contenu ; chaque enregistrement rafraîchit les pages concernées, mises en cache 10 minutes sinon.
-- Après une sortie, il envoie aux participants un lien privé vers l'album photo ; ceux-ci peuvent y laisser un avis étoilé, publié après modération.
-- La version anglaise vit sous `/en` : chaque section de l'admin a une bascule FR/EN, et un champ laissé vide en anglais affiche le texte français.
+## Utilisation
 
-## Ce qui est construit
+- **Activités et calendrier.** Filtres par type, région ou mois ; vue liste ou mois.
+- **Carte.** Les lieux sur une carte OpenStreetMap ; chaque marqueur liste les sorties qui s'y déroulent.
+- **Administration.** Le gérant modifie les activités (plusieurs tarifs chacune), les dates, les lieux, chaque libellé public, les sections des pages et les menus, avec un aperçu avant publication. Chaque enregistrement rafraîchit les pages concernées.
+- **Albums souvenirs.** Après une sortie, les participants reçoivent un lien privé vers les photos et peuvent laisser un avis étoilé, publié après modération.
+- **Version anglaise.** Sous `/en` ; les sections de l'administration ont une bascule FR/EN (pas encore l'éditeur de blocs), et un champ anglais vide affiche le texte français.
+- **Statistiques.** Visiteurs, pages, provenance, appareils et pays, sans cookie ni adresse IP stockée.
 
-En service et utilisé par le client, qui y a créé 11 activités (9 publiées) et 9 lieux.
+## Architecture
 
-- **Activités** : mise en ligne, mise en avant, plusieurs tarifs par activité, dates, responsable choisi dans une liste.
-- **Contenu éditable** : chaque libellé public, sections masquables et réordonnables, 15 types de blocs, pages libres, menus, médiathèque, éditeur de texte, aperçu du non-publié.
-- **Calendrier** public, par mois ou en grille, avec filtres ; « Réserver cette date » présélectionne la date.
-- **Récits** (blog), **albums souvenirs** par lien privé, **avis étoilés** modérés.
-- **Moniteurs** : fiches publiques, langues parlées (8 au choix), mot de passe régénérable par un administrateur.
-- **Statistiques internes** : visiteurs, pages, provenance, appareils, pays, sans cookie ni service tiers, sans stocker d'adresse IP.
-- **Version anglaise** : 345 libellés d'interface traduits, 9 types de contenu traduisibles dans l'admin, balises hreflang et plan du site bilingue. L'éditeur de blocs n'a pas encore sa bascule anglaise.
+![Architecture : visiteurs et gérant passent par le site Next.js sur Vercel ; pages publiques et administration lisent et écrivent dans une base Supabase ; chaque enregistrement de l'administration rafraîchit les pages publiques ; les photos sont dans le stockage Supabase ; les cartes viennent d'OpenStreetMap](docs/architecture.svg)
 
-## Ce qui est public
+<details><summary>Diagramme en français</summary>
 
-Le site est en ligne. Le code et l'administration restent privés.
+![Architecture : visiteurs et gérant passent par le site Next.js sur Vercel ; pages publiques et administration lisent et écrivent dans une base Supabase ; chaque enregistrement de l'administration rafraîchit les pages publiques ; les photos sont dans le stockage Supabase ; les cartes viennent d'OpenStreetMap](docs/architecture.fr.svg)
 
-## Pile technique
+</details>
 
-- Next.js 16, React 19, Tailwind CSS
-- Supabase (Postgres, authentification, stockage, règles d'accès par ligne)
-- Leaflet et OpenStreetMap pour les cartes
-- Hébergement Vercel
+## Exploitation
+
+- **Hébergement.** Vercel pour le site, Supabase (région Paris) pour la base et les photos.
+- **État.** En ligne depuis septembre 2026 ; le client en modifie le contenu.
+- **Technologies.** Next.js 16, React 19, Tailwind CSS, Leaflet.
+
+---
+
+**Anthony Hunt** · [ingevision.cloud](https://ingevision.cloud/?p=collectif-vertical) · [LinkedIn](https://www.linkedin.com/in/anthony-hunt-3948a9196) · [GitHub](https://github.com/anthohunt)
+
+Le code et les données du client sont privés.
