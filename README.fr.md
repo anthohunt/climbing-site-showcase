@@ -4,15 +4,15 @@
 
 **Le site d'un collectif de moniteurs d'escalade, que son gérant fait vivre seul, sans toucher au code.**
 
-[![Sur le site en ligne, en anglais : les activités, une sortie, le calendrier, le formulaire de demande (jamais envoyé), puis la carte (version anglaise, cliquer pour la vidéo complète)](docs/demo.webp)](https://drive.google.com/file/d/1B9oK9wRxfSd5EIXMBbhqnzkp8tGdWlr6/view)
+![Sur le site en ligne, en anglais : les activités, une sortie, le calendrier, le formulaire de demande (jamais envoyé), puis la carte (version anglaise)](docs/demo.webp)
 
 <details><summary>Version française</summary>
 
-[![Sur le site en ligne, le calendrier en vue mois puis liste ; « Réserver cette date » ouvre le formulaire de demande sur cette date et un visiteur tape son nom (cliquer pour la vidéo complète)](docs/demo.fr.webp)](https://drive.google.com/file/d/1cBOu1wGiLLY-ZN2Zwqln4j9ehEzVc2Z8/view)
+![Sur le site en ligne, le calendrier en vue mois puis liste ; « Réserver cette date » ouvre le formulaire de demande sur cette date et un visiteur tape son nom](docs/demo.fr.webp)
 
 </details>
 
-*Calendrier, puis « Réserver cette date » : le formulaire s'ouvre avec la date déjà choisie. [Vidéo complète (1 min 12)](https://drive.google.com/file/d/1cBOu1wGiLLY-ZN2Zwqln4j9ehEzVc2Z8/view)*
+*Calendrier, puis « Réserver cette date » : le formulaire s'ouvre avec la date déjà choisie.*
 
 ## Utilisation
 
