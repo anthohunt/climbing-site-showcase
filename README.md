@@ -4,15 +4,15 @@
 
 **A climbing instructors' website that its manager runs alone, without touching the code.**
 
-[![On the live site in English: activities, an outing's page, the calendar in month then list view, the enquiry form (a visitor types an e-mail, nothing sent), then the map (click for the full video)](docs/demo.webp)](https://drive.google.com/file/d/1B9oK9wRxfSd5EIXMBbhqnzkp8tGdWlr6/view)
+![On the live site in English: activities, an outing's page, the calendar in month then list view, the enquiry form (a visitor types an e-mail, nothing sent), then the map](docs/demo.webp)
 
 <details><summary>French version</summary>
 
-[![Sur le site en ligne, le calendrier en vue mois puis liste ; « Réserver cette date » ouvre le formulaire de demande sur cette date et un visiteur tape son nom (cliquer pour la vidéo complète)](docs/demo.fr.webp)](https://drive.google.com/file/d/1cBOu1wGiLLY-ZN2Zwqln4j9ehEzVc2Z8/view)
+![Sur le site en ligne, le calendrier en vue mois puis liste ; « Réserver cette date » ouvre le formulaire de demande sur cette date et un visiteur tape son nom](docs/demo.fr.webp)
 
 </details>
 
-*Activities, an outing, the calendar, the enquiry form (never sent), the map; the instructor's own texts stay in French. [Full video (0:43)](https://drive.google.com/file/d/1B9oK9wRxfSd5EIXMBbhqnzkp8tGdWlr6/view)*
+*Activities, an outing, the calendar, the enquiry form (never sent), the map; the instructor's own texts stay in French.*
 
 ## Using it
 
